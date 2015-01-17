@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -20,4 +21,10 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'minitest-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'growl'                     
+  gem 'guard'            
+  gem 'guard-minitest', require: false
 end
