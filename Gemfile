@@ -19,12 +19,13 @@ gem 'autoprefixer-rails'
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'minitest-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'growl'                     
-  gem 'guard'            
+  gem 'growl'
+  gem 'guard'
   gem 'guard-minitest', require: false
 end
