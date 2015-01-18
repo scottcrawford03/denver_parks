@@ -1,0 +1,40 @@
+<div class="panel panel-success">
+  <div class="panel-heading"><%= @park.formal_name %></div>
+  <div class="panel-body">
+    <p>
+      <strong>Location: </strong>
+      <%= @park.location %></e>
+    </p>
+    <p>
+      <img src=<%= "http://www.denvergov.org/portals/747/#{@park.photo}" %> width="144" height="144" class="img-rounded"</img>
+    </p>
+    <p>
+      <strong>Type: </strong>
+      <%= @park.park_type %>
+      <strong>| Class: </strong>
+      <%= @park.park_class %>
+      <strong>| Acreage: </strong>
+      <%= "#{number_with_precision(@park.gis_acres, precision: 2)}" %>
+    </p>
+    <p>
+      <strong>Cross Streets: </strong>
+      <%= @park.cross_streets %>
+
+      <strong>| Address: </strong>
+      <%= @park.address_line1 %>
+      <%= @park.address_line2 %>
+      <%= @park.city %>
+      <%= @park.state %>
+      <%= @park.zip %>
+
+      <strong>| Lat/Lon: </strong>
+      <span class="badge"><%= @park.latitude %> | <%= @park.longitude %>
+    </p>
+    <p>
+      <strong>Facilities: </strong>
+      <%= @park.facilities %>
+    </p>
+  </div>
+</div>
+
+
