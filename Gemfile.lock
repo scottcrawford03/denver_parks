@@ -233,6 +233,7 @@ DEPENDENCIES
   launchy
   minitest-rails
   pg
+  pry
   rails (= 4.2.0)
   ransack
   sass-rails (~> 5.0)
