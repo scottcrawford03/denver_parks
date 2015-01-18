@@ -11,8 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
-
-
+gem 'ransack'
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
@@ -24,7 +23,7 @@ group :development, :test do
   gem 'minitest-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'growl'                     
-  gem 'guard'            
+  gem 'growl'
+  gem 'guard'
   gem 'guard-minitest', require: false
 end
