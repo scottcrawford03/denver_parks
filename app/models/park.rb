@@ -4,6 +4,7 @@ class Park < ActiveRecord::Base
   end
 
   private
+
   def self.parks
     Arel::Table.new(:parks)
   end
