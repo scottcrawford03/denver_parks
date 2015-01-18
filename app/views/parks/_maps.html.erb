@@ -4,10 +4,11 @@
 
 <% parks.each do |park| %>
   <% Rails.logger.info(park.inspect) %>
-<div style="display:none" id="park-pane-<%=park.id%>">
-  <h1> here's a park! <%= park.formal_name %></h1>
-</div>
+  <div style="display:none" id="park-pane-<%=park.id%>">
+    <h1> here's a park! <%= park.formal_name %></h1>
+  </div>
 <% end %>
+
 <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js">
 </script>
