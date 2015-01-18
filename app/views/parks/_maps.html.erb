@@ -18,7 +18,34 @@
         var mapOptions = {
           center: { lat: 39.75, lng: -105},
           zoom: 12,
-          styles:[{"stylers":[{"saturation":-100}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#0099dd"}]},{"elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#aadd55"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{}]
+          panControl: false,
+          zoomControl: true,
+          zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.RIGHT_CENTER
+          },
+          mapTypeControl: false,
+          scaleControl: true,
+          streetViewControl: false,
+          overviewMapControl: true,
+          styles:[{"stylers":[{"saturation":-100}]},{"featureType":"water",
+                                                     "elementType":"geometry.fill",
+                                                     "stylers":[{"color":"#0099dd"}]},
+                                                     {"elementType":"labels",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {"featureType":"poi.park",
+                                                     "elementType":"geometry.fill",
+                                                     "stylers":[{"color":"#aadd55"}]},
+                                                     {"featureType":"road.highway",
+                                                     "elementType":"labels",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {"featureType":"road.arterial",
+                                                     "elementType":"labels.text",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {"featureType":"road.local",
+                                                     "elementType":"labels.text",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {}]
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
