@@ -3,3 +3,29 @@
 </div>
 
 <div id="map-canvas"></div>
+
+<%= search_form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :facilities_cont, "Facility includes" %>
+    <%= f.text_field :facilities_cont %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
+<table id="Parks">
+  <tr>
+    <th><%= sort_link @search, :formal_name, "Park Name" %></th>
+    <th><%= sort_link @search, :location, "Location" %></th>
+    <th><%= sort_link @search, :latitude, "latitude" %></th>
+    <th><%= sort_link @search, :longitude, "longitude" %></th>
+
+  </tr>
+<% @parks.each do |park| %>
+  <tr>
+    <td><%= link_to(park.formal_name, park) %></td>
+    <td><%= park.location %></td>
+    <td><%= park.latitude %></td>
+    <td><%= park.longitude %></td>
+  </tr>
+<% end %>
+</table>
