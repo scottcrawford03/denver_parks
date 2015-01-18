@@ -3,9 +3,9 @@
 </div>
 
 <% parks.each do |park| %>
-  <% Rails.logger.info(park.inspect) %>
-  <div style="display:none" id="park-pane-<%=park.id%>">
-    <h1> here's a park! <%= park.formal_name %></h1>
+  <div style="display:none" id="park-pane-<%=park.id%>" class="park-pane">
+    <h1><%= park.formal_name %></h1>
+    <p><%= park.facilities %></p>
   </div>
 <% end %>
 
@@ -14,11 +14,50 @@
 </script>
 
 <script type="text/javascript">
+  function markerClick(marker) {
+    $(".park-pane").hide();
+    var $map = $("#map-canvas");
+    var styles = {
+           position : 'absolute',
+           'z-index': 999999,
+           top: ($map.position().top + 40),
+           left: ($map.position().left + 20)
+    }
+    $(".park-pane").css(styles);
+    $("#park-pane-"+marker.park.id).show();
+  };
       function initialize() {
         var mapOptions = {
           center: { lat: 39.75, lng: -105},
           zoom: 12,
-          styles:[{"stylers":[{"saturation":-100}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#0099dd"}]},{"elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#aadd55"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},{}]
+          panControl: false,
+          zoomControl: true,
+          zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.RIGHT_CENTER
+          },
+          mapTypeControl: false,
+          scaleControl: true,
+          streetViewControl: false,
+          overviewMapControl: true,
+          styles:[{"stylers":[{"saturation":-100}]},{"featureType":"water",
+                                                     "elementType":"geometry.fill",
+                                                     "stylers":[{"color":"#0099dd"}]},
+                                                     {"elementType":"labels",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {"featureType":"poi.park",
+                                                     "elementType":"geometry.fill",
+                                                     "stylers":[{"color":"#aadd55"}]},
+                                                     {"featureType":"road.highway",
+                                                     "elementType":"labels",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {"featureType":"road.arterial",
+                                                     "elementType":"labels.text",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {"featureType":"road.local",
+                                                     "elementType":"labels.text",
+                                                     "stylers":[{"visibility":"on"}]},
+                                                     {}]
         };
         
         var map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -33,13 +72,19 @@
           var marker = new google.maps.Marker({
                          position: {lat: park.latitude, lng: park.longitude},
                          map: map,
+                         park: park,
                          title: park.formal_name
                         });
+          markers.push(marker);
 
-          //google.maps.event.addListener(marker, 'click', function() {
-          //add click events
-          //});
-         markers.push(marker);
+          for (var i = 0; i < markers.length; i++) {
+           var marker = markers[i];
+           google.maps.event.addListener(marker, 'click', function() {
+               map.setZoom(15);
+               map.setCenter(this.getPosition());
+               markerClick(this);
+           });
+          };
         }
 
       };
