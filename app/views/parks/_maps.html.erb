@@ -1,3 +1,14 @@
+<div id="park-data" style="display:none;">
+  <%= parks.to_json %>
+</div>
+
+<% parks.each do |park| %>
+  <% Rails.logger.info(park.inspect) %>
+  <div style="display:none" id="park-pane-<%=park.id%>">
+    <h1> here's a park! <%= park.formal_name %></h1>
+  </div>
+<% end %>
+
 <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js">
 </script>
@@ -12,7 +23,23 @@
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
+        var parksJson = $("#park-data").html();
+        var parks = JSON.parse(parksJson);
+        var markers = [];
+        for (i in parks) {
+          var park = parks[i]
+          var marker = new google.maps.Marker({
+                         position: {lat: park.latitude, lng: park.longitude},
+                         map: map,
+                         title: park.formal_name
+                        });
 
-      }
+          //google.maps.event.addListener(marker, 'click', function() {
+          //add click events
+          //});
+         markers.push(marker);
+        }
+
+      };
       google.maps.event.addDomListener(window, 'load', initialize);
 </script>
