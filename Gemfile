@@ -14,9 +14,9 @@ gem 'autoprefixer-rails'
 gem 'ransack'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'unicorn'
 
 # gem 'bcrypt', '~> 3.1.7'
-# gem 'unicorn'
 
 group :development, :test do
   gem 'byebug'
@@ -29,4 +29,8 @@ group :development, :test do
   gem 'growl'
   gem 'guard'
   gem 'guard-minitest', require: false
+end
+
+group :production do
+  gem 'rails_12factor'
 end
