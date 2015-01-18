@@ -5,6 +5,7 @@
 <% parks.each do |park| %>
   <div style="display:none" id="park-pane-<%=park.id%>" class="park-pane">
     <h1><%= park.formal_name %></h1>
+    <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img>
     <p><%= park.facilities %></p>
   </div>
 <% end %>
