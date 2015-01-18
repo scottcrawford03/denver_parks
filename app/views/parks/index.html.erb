@@ -3,3 +3,46 @@
 </div>
 
 <div id="map-canvas"></div>
+
+</br>
+<div class="container">
+  <div class="span12">
+    <%= search_form_for @search do |f| %>
+      <div class="field">
+        <%= f.label :facilities_cont, "Facility includes" %>
+        <%= f.text_field :facilities_cont %>
+      </div>
+      <div class="actions"><%= f.submit "Search", class: "btn btn-success btn-md" %></div>
+    <% end %>
+  </div>
+</div>
+
+<table id="Parks" class="table table-condensed table-striped table-hover text-center">
+  <thead>
+    <tr>
+      <th class="text-left"><%= sort_link @search, :formal_name, "Park Name" %></th>
+      <th class="text-left"><%= sort_link @search, :location, "Location" %></th>
+      <th class="text-left"><%= sort_link @search, :latitude, "latitude" %></th>
+      <th class="text-left"><%= sort_link @search, :longitude, "longitude" %></th>
+    </tr>
+  </thead>
+
+<div class="container text-center">
+  <br>
+  <br>
+  <%= will_paginate @parks, renderer: BootstrapPagination::Rails %>
+  <br>
+  <br>
+</div>
+
+  <tbody>
+    <% @parks.each do |park| %>
+      <tr>
+        <td class="text-left"><%= link_to(park.formal_name, park) %></td>
+        <td class="text-left"><%= park.location %></td>
+        <td class="text-left"><%= park.latitude %></td>
+        <td class="text-left"><%= park.longitude %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
