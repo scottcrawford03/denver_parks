@@ -12,13 +12,11 @@
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
-      <% @parks.each do |park| %>
         var marker = new google.maps.Marker({
-          position: { lat: park.latitude, lng: park.longitude},
+          position: { lat: 39.60, lng: -105},
           map: map,
           title:"Hello World!"
         });
-      <% end %>
 
       };
       google.maps.event.addDomListener(window, 'load', initialize);
