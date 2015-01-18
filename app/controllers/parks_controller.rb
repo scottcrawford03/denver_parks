@@ -1,6 +1,6 @@
 class ParksController < ApplicationController
   def index
     @search = Park.search(params[:q])
-    @parks = @search.result
+    @parks = @search.result.page(params[:page])
   end
 end
