@@ -3,8 +3,35 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .park-pane {
-  background-color: red;
-  width: 25%;
-  height: 50%;
+  width: 350px;
+  height: 350px;
+  margin-top: 10px;
+  font-size: 11px;
+  position: relative;
+  font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+  background-color: white;
+  padding: 9px 11px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #c5c5c5;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+}
+
+.park-pane img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.park-pane h1 {
   text-align: center;
+}
+
+.park-pane p {
+
 }
