@@ -1,9 +1,9 @@
 Picnic Tables
 169
 Benches
-157
+158
 Bike/Pedestrian Path
-146
+149
 Playground
 135
 Basketball Court
@@ -36,7 +36,7 @@ Horseshoe Pits
 22
 Natural Open Space
 21
-Scenic View Shed
+Scenic View
 20
 Lake
 19
@@ -46,23 +46,25 @@ Outdoor Pool
 16
 Grills
 15
-Fountain
-11
+Unlisted
+14
 Parking Lot
+11
+Fountain
 11
 Passive Open Space
 10
+Bleachers
+9
 Dog Park
 9
-Bleachers
+High Line Canal Trail
 9
 Plaza
 8
 Public Art
 8
 Cherry Creek Trail
-7
-High Line Canal Trail
 7
 Wildlife Habitat
 7
@@ -74,131 +76,123 @@ Bear Creek Trail
 6
 Volleyball Court
 6
-Skate Park
-5
-
-5
-Community Garden
+Sand Volleyball Court
 5
 Bike/pedestrian Path
 5
-Sand Volleyball Court
+Skate Park
 5
-Lakewood Gulch Trail
-4
-Multi-purpose Field (Lacrosse
-4
+Community Garden
+5
 Rugby
 4
 Views
 4
-Soccer)
-4
-Memorial / Monument
-4
-Walking/Jogging Path
+Multi-purpose Field (Lacrosse
 4
 Pavilion
 4
+Soccer)
+4
 Interactive Fountain
 4
+Memorial / Monument
+4
+Lakewood Gulch Trail
+4
 Historic Shelter
+4
+Walking/Jogging Path
 4
 Harvard Gulch Trail
 4
 Riparian Natural Areas
 3
-Undeveloped Park
+Shade Structure
+3
+Disc Golf Course
+3
+Soccer Field Complex
+3
+Library
 3
 Sanderson Gulch Trail
 3
 Restaurant
 3
-Disc Golf Course
-3
-Shade Structure
-3
 Fishing
-3
-Soccer Field Complex
-3
-Historic Stone Wellhouse
 3
 Softball Field
 3
-Library
+Historic Stone Wellhouse
 3
 Press Box
 3
 Westerly Creek Trail
 3
+Undeveloped Park
+3
 Bocce Ball Court
 3
-Paid Admission Required
-2
-Scenic Overlook
-2
-Museum
-2
-Synthetic Field
-2
-Weir Gulch Trail
-2
-Historical Site
-2
 Fitness Course
-2
-Golf Course
 2
 Scenic Views
 2
-Ping Pong Table
+Museum
+2
+Historical Site
+2
+Scenic Overlook
+2
+First Creek Trail
 2
 Prairie Dog Habitat
 2
+Synthetic Field
+2
 Trails & Trail Connections
+2
+Golf Course
 2
 Goldsmith Gulch Trail
 2
-Special Use Activities
+Weir Gulch Trail
 2
-Historic Site
+Paid Admission Required
 2
 Hiking Trails
 2
-Trail Connection
-1
-Bike/Pedestrian Path: High Line Canal Trail
-1
-Off-street Trail Connection
-1
-Special Permit Picnic Area
-1
-Montclair Civic Building (The Mulkery)
-1
-Panorama Point Trail
+Ping Pong Table
+2
+Special Use Activities
+2
+Future Bike/Pedestrian Path
+2
+Historic Site
+2
+Ropes Course
 1
 Amphitheater
 1
-Connection to South Platte River Trail
+Stapleton Greenway Trail
 1
 Gates Tennis Center
 1
-Bike Skills Course
+Off-street Trail Connection
 1
-Firepits
+Trail Connection
 1
 Flemming Mansion (Special Use)
 1
-Grant-Humphrey's Mansion
+Panorama Point Trail
 1
 Wilderness Area
 1
+Special Permit Picnic Area
+1
+Firepits
+1
 Fishing Access
-1
-Five Mile Scenic Lariat Trail
-1
-Beaver Brook Trailhead
 1
 Observatory
 1
@@ -210,7 +204,7 @@ Nature Center
 1
 Clubhouse
 1
-Stapleton Greenway Trail
+Connection to South Platte River Trail
 1
 Trail
 1
@@ -222,89 +216,93 @@ Boat Rentals
 1
 Lakehouse
 1
-Parking
+Bike Skills Course
 1
-Nature Center & Preserve
+Five Mile Scenic Lariat Trail
 1
 West Harvard Gulch Trail
+1
+Beaver Brook Trailhead
+1
+Nature Center & Preserve
 1
 Historic Spring House
 1
 Buffalo Bill Grave & Museum
 1
+Shelter
+1
 Pahaska Tepee
 1
 Future Park Location
 1
-Shelter
-1
 Interim Dog Park
-1
-Future Recreation Center Site
-1
-Grill
 1
 Baseball / Softball FIeld
 1
-Special Events
+Grant-Humphrey's Mansion
 1
-Educational Activities
+Parking
 1
 Joggin Path
 1
 Lawn Bowling
 1
+Future Recreation Center Site
+1
+Grill
+1
+Futsol Court
+1
+Located just off of the Cherry Creek Trail
+1
+Special Events
+1
+Future Trunk Open Space
+1
+Educational Activities
+1
 Flower Bed
 1
 Historic Amphitheatre
 1
-Futsol Court
-1
-Trading Post (Welcome Center)
-1
-Visitor Center
-1
-Future Trunk Open Space
-1
-Exhibits
+Adjacent to the Highline Canal Trail
 1
 Future park development
 1
 Walking/Jogging Paths
 1
-Bike/Pedestrian Path: First Creek Trail
-1
 Overlook
 1
-Bison Herd
-1
-Trails
-1
-Geologic Overlook
+Trading Post (Welcome Center)
 1
 Buchanan Park Trail
 1
 Trail Connections: Pioneer Trail
 1
+Bison Herd
+1
+Trails
+1
 Chief Hosa Lodge
 1
 Event Facility
 1
+Visitor Center
+1
+Exhibits
+1
 Campgrounds
 1
-Ropes Course
+Montclair Civic Building (The Mulkery)
 1
-Trading Post Trail
-1
-Trail connections to adjacent Open Space Parks
-1
-Stone Bench
-1
-Trail Access (Beaver Brook via Colorow Trail)
-1
-Overlook Plaza
+Geologic Overlook
 1
 Echo Lake Lodge
+1
+Stone Benches
+1
+Trail Access (Beaver Brook via Colorow Trail)
 1
 Historic Fireplace/Monument
 1
@@ -330,23 +328,21 @@ Bike/Pedestrian Path: South Platte River Trail
 1
 Running Track
 1
-Handball Court
-1
-Zoo
-1
 Basball / Softball Field
 1
-Adjacent to the Highline Canal Trail
+Trading Post Trail
 1
-Located just off of the Cherry Creek Trail
+Trail connections to adjacent Open Space Parks
 1
 Fountains
 1
 Gardens
 1
-Bemches
+Handball Court
 1
-Voorhies Memorial
+Zoo
+1
+Memorial
 1
 Greek Amphitheater
 1
@@ -356,11 +352,9 @@ Bison Preserve
 1
 Historic Ranch
 1
-Future Bike/Pedestrian Path: First Creek Trail
+Overlook Plaza
 1
 Recreation / Senior Center
 1
-Future Bike/Pedestrian Path: High Line Canal Trail
-1
-Bike/Pedestrian Path: Lakewood Gulch Trail and South Platte River Trail
+Lakewood Gulch Trail and South Platte River Trail
 1
