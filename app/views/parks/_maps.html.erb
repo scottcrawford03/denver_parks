@@ -47,12 +47,12 @@
           overviewMapControl: true,
           styles:[{"stylers":[{"saturation":-100}]},{"featureType":"water",
                                                      "elementType":"geometry.fill",
-                                                     "stylers":[{"color":"#0099dd"}]},
+                                                     "stylers":[{"color":"#83b8d1"}]},
                                                      {"elementType":"labels",
                                                      "stylers":[{"visibility":"on"}]},
                                                      {"featureType":"poi.park",
                                                      "elementType":"geometry.fill",
-                                                     "stylers":[{"color":"#aadd55"}]},
+                                                     "stylers":[{"color":"#c8e0a0"}]},
                                                      {"featureType":"road.highway",
                                                      "elementType":"labels",
                                                      "stylers":[{"visibility":"on"}]},
@@ -74,11 +74,13 @@
         var markers = [];
         for (i in parks) {
           var park = parks[i]
+          var image = '<%= image_url('black_dot_small.png') %>'
           var marker = new google.maps.Marker({
                          position: {lat: park.latitude, lng: park.longitude},
                          map: map,
                          park: park,
-                         title: park.formal_name
+                         title: park.formal_name,
+                         icon: image
                         });
           markers.push(marker);
 
