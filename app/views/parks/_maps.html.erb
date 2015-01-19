@@ -4,6 +4,7 @@
 
 <% parks.each do |park| %>
   <div style="display:none" id="park-pane-<%=park.id%>" class="park-pane">
+    <button id="closeButton" class="close-button">X</button>
     <h2><%= park.formal_name %></h2>
     <h4><%= park.address_line1 %></h4>
     <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img><hr>
@@ -29,6 +30,7 @@
     $(".park-pane").css(styles);
     $("#park-pane-"+marker.park.id).show();
   };
+
       function initialize() {
         var mapOptions = {
           center: { lat: 39.75, lng: -105},
@@ -87,9 +89,13 @@
                map.setCenter(this.getPosition());
                markerClick(this);
            });
+
           };
         }
 
+        $(".close-button").click(function() {
+          $(this).parent().hide()
+        });
       };
       google.maps.event.addDomListener(window, 'load', initialize);
 </script>
