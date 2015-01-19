@@ -1,21 +1,25 @@
 <div id="title">
-<h1>Mile High Parks</h1>
+  <h1>Mile High Parks</h1>
 </div>
 
-<div id="map-canvas"></div>
-
-</br>
 <div class="container">
-  <div class="span12">
-    <%= search_form_for @search do |f| %>
+  <div class="text-center">
+    <%= search_form_for @search, html: {class: "form-inline input-md"} do |f| %>
       <div class="field">
-        <%= f.label :facilities_cont, "Facility includes" %>
-        <%= f.text_field :facilities_cont %>
+        <%= f.collection_select :facilities_cont, Park::FACILITIES, :to_s, :to_s,
+          { :include_blank => true }, {class: 'form-control'} %>
+        <%= f.submit "Search", class: "btn btn-success btn-md",
+                               style: "margin-left: 5px"%>
+        <%= link_to "Clear", parks_path, class: "btn btn-warning btn-md",
+                                         style: "margin-left: 5px" %>
       </div>
-      <div class="actions"><%= f.submit "Search", class: "btn btn-success btn-md" %></div>
     <% end %>
   </div>
 </div>
+
+</br>
+<div id="map-canvas"></div>
+</br>
 
 <table id="Parks" class="table table-condensed table-striped table-hover text-center">
   <thead>

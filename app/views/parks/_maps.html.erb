@@ -4,8 +4,11 @@
 
 <% parks.each do |park| %>
   <div style="display:none" id="park-pane-<%=park.id%>" class="park-pane">
-    <h1><%= park.formal_name %></h1>
-    <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img>
+    <button id="closeButton" class="close-button">X</button>
+    <h2><%= park.formal_name %></h2>
+    <h4><%= park.address_line1 %></h4>
+    <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img><hr>
+    <h5><b>Facilities:</b></h5>
     <p><%= park.facilities %></p>
     <p><%= link_to  "More info", park_path(park), :target => "_blank" %></p>
   </div>
@@ -28,6 +31,7 @@
     $(".park-pane").css(styles);
     $("#park-pane-"+marker.park.id).show();
   };
+
       function initialize() {
         var mapOptions = {
           center: { lat: 39.75, lng: -105},
@@ -40,16 +44,16 @@
           },
           mapTypeControl: false,
           scaleControl: true,
-          streetViewControl: false,
+          streetViewControl: true,
           overviewMapControl: true,
           styles:[{"stylers":[{"saturation":-100}]},{"featureType":"water",
                                                      "elementType":"geometry.fill",
-                                                     "stylers":[{"color":"#0099dd"}]},
+                                                     "stylers":[{"color":"#83b8d1"}]},
                                                      {"elementType":"labels",
                                                      "stylers":[{"visibility":"on"}]},
                                                      {"featureType":"poi.park",
                                                      "elementType":"geometry.fill",
-                                                     "stylers":[{"color":"#aadd55"}]},
+                                                     "stylers":[{"color":"#c8e0a0"}]},
                                                      {"featureType":"road.highway",
                                                      "elementType":"labels",
                                                      "stylers":[{"visibility":"on"}]},
@@ -61,7 +65,7 @@
                                                      "stylers":[{"visibility":"on"}]},
                                                      {}]
         };
-        
+
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
@@ -71,11 +75,13 @@
         var markers = [];
         for (i in parks) {
           var park = parks[i]
+          var image = '<%= image_url('black_dot_small.png') %>'
           var marker = new google.maps.Marker({
                          position: {lat: park.latitude, lng: park.longitude},
                          map: map,
                          park: park,
-                         title: park.formal_name
+                         title: park.formal_name,
+                         icon: image
                         });
           markers.push(marker);
 
@@ -86,9 +92,13 @@
                map.setCenter(this.getPosition());
                markerClick(this);
            });
+
           };
         }
 
+        $(".close-button").click(function() {
+          $(this).parent().hide()
+        });
       };
       google.maps.event.addDomListener(window, 'load', initialize);
 </script>
