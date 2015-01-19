@@ -21,6 +21,27 @@
 
 }
 
+.container-navbar {
+  display: inline-block;
+  width: 100%;
+ }
+
+.field h4 {
+  float: left;
+  margin-right: 10px;
+}
+
+#title {
+  float: left;
+  margin-left: 25px;
+}
+
+.search-nav {
+  float: right;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
 .park-pane img {
   display: block;
   margin-left: auto;
