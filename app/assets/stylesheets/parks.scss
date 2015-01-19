@@ -4,7 +4,7 @@
 
 .park-pane {
   width: 350px;
-  height: 350px;
+  height: 375px;
   margin-top: 10px;
   font-size: 11px;
   position: relative;
@@ -28,10 +28,19 @@
   margin-right: auto;
 }
 
-.park-pane h1 {
+.park-pane h2 {
+  text-align: center;
+}
+.park-pane h4 {
   text-align: center;
 }
 
 .park-pane p {
+  padding-left: 5px;
+  padding-right: 5px
+}
 
+.park-pane h5 {
+  padding-left: 5px;
+  padding-right: 5px
 }

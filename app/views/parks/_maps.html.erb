@@ -4,8 +4,10 @@
 
 <% parks.each do |park| %>
   <div style="display:none" id="park-pane-<%=park.id%>" class="park-pane">
-    <h1><%= park.formal_name %></h1>
-    <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img>
+    <h2><%= park.formal_name %></h2>
+    <h4><%= park.address_line1 %></h4>
+    <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img><hr>
+    <h5><b>Facilities:</b></h5>
     <p><%= park.facilities %></p>
   </div>
 <% end %>
@@ -60,7 +62,7 @@
                                                      "stylers":[{"visibility":"on"}]},
                                                      {}]
         };
-        
+
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
 
