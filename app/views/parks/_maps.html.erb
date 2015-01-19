@@ -3,7 +3,7 @@
 </div>
 
 <% parks.each do |park| %>
-  <div style="display:none" id="park-pane-<%=park.id%>" class="park-pane">
+  <div id="park-pane-<%=park.id%>" class="park-pane">
     <button id="closeButton" class="close-button">X</button>
     <h2><%= park.formal_name %></h2>
     <h4><%= park.address_line1 %></h4>
@@ -20,7 +20,7 @@
 
 <script type="text/javascript">
   function markerClick(marker) {
-    $(".park-pane").hide();
+    $(".park-pane.active").removeClass("active");
     var $map = $("#map-canvas");
     var styles = {
            position : 'absolute',
@@ -28,8 +28,9 @@
            top: ($map.position().top + 40),
            left: ($map.position().left + 20)
     }
-    $(".park-pane").css(styles);
-    $("#park-pane-"+marker.park.id).show();
+    $thisPane = $("#park-pane-"+marker.park.id);
+    $thisPane.addClass("active")
+    $thisPane.css(styles);
   };
 
       function initialize() {

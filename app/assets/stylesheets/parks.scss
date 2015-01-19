@@ -18,9 +18,12 @@
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-
+  display: none;
 }
 
+.park-pane.active {
+  display: block;
+}
 .container-navbar {
   display: inline-block;
   width: 100%;
