@@ -1,14 +1,14 @@
 
 <div class="container-navbar">
   <div id="title">
-    <h1>Mile High Parks</h1>
+    <h1>mile high parks</h1>
   </div>
 
 
   <div class="text-center search-nav">
     <%= search_form_for @search, html: {class: "form-inline input-md"} do |f| %>
       <div class="field">
-        <h4>Search Facilities</h4>
+        <h4>search facilities</h4>
         <%= f.collection_select :facilities_cont, Park::FACILITIES, :to_s, :to_s,
           { :include_blank => true }, {class: 'form-control'} %>
         <%= f.submit "Search", class: "btn btn-success btn-md",
