@@ -10,6 +10,7 @@
     <img src=<%= "http://www.denvergov.org/portals/747/#{park.photo}" %> width="144" height="144" class="img-rounded"</img><hr>
     <h5><b>Facilities:</b></h5>
     <p><%= park.facilities %></p>
+    <p><%= link_to  "More info", park_path(park), :target => "_blank" %></p>
   </div>
 <% end %>
 
