@@ -12,9 +12,9 @@
         <%= f.collection_select :facilities_cont, Park::FACILITIES, :to_s, :to_s,
           { :include_blank => true }, {class: 'form-control'} %>
         <%= f.submit "Search", class: "btn btn-success btn-md",
-                               style: "margin-left: 5px"%>
+                               style: "margin-left: 5px; background-color: #3085c3; border-color: #3085c3"%>
         <%= link_to "Clear", parks_path, class: "btn btn-warning btn-md",
-                                         style: "margin-left: 5px" %>
+                                         style: "margin-left: 5px; background-color: #494949; border-color: #494949" %>
       </div>
     <% end %>
   </div>
