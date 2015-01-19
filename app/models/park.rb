@@ -1,10 +1,11 @@
 class Park < ActiveRecord::Base
   self.per_page = 10
 
-  FACILITIES = ['Benches', 'Bike/Pedestrian Path', 'Community Garden',
-                'Dog Park', 'Fountain', 'Grills', 'Lake', 'Outdoor Pool',
-                'Parking Lot', 'Picnic Tables', 'Playground', 'Public Art',
-                'Restroom', 'Skate Park', 'Wildlife Habitat']
+  FACILITIES = ['Benches', 'Basketball Court', 'Bike/Pedestrian Path', 'Community Garden',
+                'Dog Park', 'Drinking Fountain', 'Fishing', 'Fountain', 'Grills',
+                'Lake', 'Natural Areas', 'Outdoor Pool', 'Parking Lot', 'Picnic Area',
+                'Playground', 'Public Art', 'Restroom', 'Skate Park', 'Soccer Field',
+                'Wildlife Habitat']
 
   def self.facility_includes(type)
     where(parks[:facilities].matches("%#{type}%"))
