@@ -17,7 +17,12 @@
       src="https://maps.googleapis.com/maps/api/js">
 </script>
 
-
+<script type="text/javascript">
+      document.getElementById('closeButton').addEventListener('click', function(e) {
+        e.preventDefault();
+        this.parentNode.style.display = 'none';
+      }, false);
+</script>
 
 <script type="text/javascript">
   function markerClick(marker) {
@@ -95,10 +100,4 @@
 
       };
       google.maps.event.addDomListener(window, 'load', initialize);
-
-      document.getElementById('closeButton').addEventListener('click', function(e) {
-        e.preventDefault();
-        this.parentNode.style.display = 'none';
-      }, false);
-
 </script>
